@@ -88,19 +88,81 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+// Present a series of prompts for password criteria
+// Length of password
+// At least 8 characters but no more than 128.
+// Character types
+// Lowercase
+// Uppercase
+// Numeric
+// Special characters ($@%&*, etc)
+
+let passwordSize = 0;
+
+let characters = {
+  "special": false,
+  "numeric": false,
+  "lowerCase": false,
+  "upperCase": false
+}
+
+let allChars = [];
+
 // Function to prompt user for password options
 function getPasswordOptions() {
+  allChars = [];
+  while (passwordSize < 8 || passwordSize > 128 || isNaN(passwordSize)){    
+    passwordSize = parseInt(prompt("Choose a number between 8 and 128"));
+  }
 
+  if (confirm("Special characters?")){
+    characters.special = true;
+    allChars = allChars.concat(specialCharacters)
+  }
+  if (confirm("Numeric?")){
+    characters.numeric = true;
+    allChars = allChars.concat(numericCharacters)
+  }
+  if (confirm("Lower case?")){
+    characters.lowerCase = true;
+    allChars = allChars.concat(lowerCasedCharacters)
+  }
+  if (allChars.length === 0 || confirm("Upper case?")){
+    characters.upperCase = true;
+    allChars = allChars.concat(upperCasedCharacters)
+  }
+  writePassword();
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  let index = Math.floor(Math.random() * (arr.length - 1));
+  return arr[index];
 }
 
 // Function to generate password with user input
 function generatePassword() {
-
+  let passArray = [];
+  if (characters.special) {
+    passArray.push(getRandom(specialCharacters))
+  }
+  if (characters.numeric) {
+    passArray.push(getRandom(numericCharacters))
+  }
+  if (characters.lowerCase) {
+    passArray.push(getRandom(lowerCasedCharacters))
+  }
+  if (characters.upperCase) {
+    passArray.push(getRandom(upperCasedCharacters))
+  }
+  while (passArray.length < passwordSize) {
+    passArray.push(getRandom(allChars));
+  }
+  let shuffled = passArray
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value)
+  return shuffled.join("");
 }
 
 // Get references to the #generate element
@@ -115,4 +177,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
+generateBtn.addEventListener('click', getPasswordOptions);
