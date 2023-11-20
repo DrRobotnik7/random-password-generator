@@ -88,15 +88,6 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Present a series of prompts for password criteria
-// Length of password
-// At least 8 characters but no more than 128.
-// Character types
-// Lowercase
-// Uppercase
-// Numeric
-// Special characters ($@%&*, etc)
-
 let passwordSize = 0;
 
 let characters = {
