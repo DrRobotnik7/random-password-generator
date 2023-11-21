@@ -123,6 +123,7 @@ function getPasswordOptions() {
     allChars = allChars.concat(upperCasedCharacters)
   }
   writePassword();
+  passwordSize = 0;
 }
 
 // Function for getting a random element from an array
@@ -149,7 +150,7 @@ function generatePassword() {
   while (passArray.length < passwordSize) {
     passArray.push(getRandom(allChars));
   }
-  let shuffled = passArray
+  let shuffled = passArray // Taken from stack overflow as a way of shuffling the password
     .map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
