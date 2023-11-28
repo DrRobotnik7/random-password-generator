@@ -24,7 +24,7 @@ URL: https://drrobotnik7.github.io/random-password-generator/
 - Click "OK" on the character types you would like included in your password. You can choose from special characters, numbers, lowercase letters and uppercase letter, in that order.
 - If you don't choose any of the first 3 options, you will automatically have an all uppercase password generated for you.
 
-![Password Generator screenshot](/assets/rpg-screenshot.png)
+![Password Generator screenshot](assets/rpg-screenshot.png)
 
 ## Credits
 
