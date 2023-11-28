@@ -28,7 +28,7 @@ URL: https://drrobotnik7.github.io/random-password-generator/
 
 ## Credits
 
-I used a code snippet from Stack Overflow to shuffle the password before it is presented to the user.
+I used a code snippet from Stack Overflow to shuffle the password before it is presented to the user. There is a comment in the code above this code block.
 
 ## License
 
