@@ -17,25 +17,18 @@ Simply click on the URL and you will be navigated to the web application in your
 
 ## Usage
 
-URL: https://drrobotnik7.github.io/bootstrap-portfolio/
+URL: https://drrobotnik7.github.io/random-password-generator/
 
-Click on the "Generate Password" button. Select a password length from between 8 and 
+- Click on the "Generate Password" button. 
+- Select a password length from between 8 and 128 characters. Choosing a number out of that range, or not using a number at all, will cause the prompt to just repeat until a valid option is chosen.
+- Click "OK" on the character types you would like included in your password. You can choose from special characters, numbers, lowercase letters and uppercase letter, in that order.
+- If you don't choose any of the first 3 options, you will automatically have an all uppercase password generated for you.
 
-Hover over various elements to add some colour to the website and take aim at the nefarious Dr.Robotnik!
-
-Click on the buttons in the project cards and you will be directed to the selected web application in a new tab in your browser.
-
-Note that currently only the Portfolio, Horiseon and Prework cards currently point to a valid URL. The other images are placeholders...for now! The cursor will change to a 'not-allowed' cursor when you hover over these placeholders.
-
-![Jack Johnson Bootstrap Portfolio Screenshot](/assets/images/bootstrap-portfolio-screenshot.png)
+![Password Generator screenshot](/assets/rpg-screenshot.png)
 
 ## Credits
 
-I used code provided by Bootstrap as a template for the header, navigation bar, jumbotron, portfolio cards and footer.
-
-Many thanks to the EdX team for teaching me the coding skills needed to complete this portfolio and the projects within it. 
-
-I would also like to acknowledge my peers in Sibert-pod-11. We're all on the same learning journey and have helped each other massively during the front-end web development skills boot camp.
+I used a code snippet from Stack Overflow to shuffle the password before it is presented to the user.
 
 ## License
 
