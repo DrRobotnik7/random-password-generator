@@ -150,7 +150,9 @@ function generatePassword() {
   while (passArray.length < passwordSize) {
     passArray.push(getRandom(allChars));
   }
-  let shuffled = passArray // Taken from stack overflow as a way of shuffling the password
+
+  //The code snippet below was taken from stack overflow as a way of shuffling the password
+  let shuffled = passArray
     .map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
