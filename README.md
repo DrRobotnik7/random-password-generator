@@ -2,7 +2,7 @@
 
 ## Description
 
-This web application randomly generates a password from a selection of user-defined character types including; uppercase, lowercase, numbers and special characters. The algorithm was coded using JavaScript.
+This web application randomly generates a password from a selection of user-defined character types including: uppercase, lowercase, numbers and special characters. The algorithm was coded using JavaScript.
 
 ## Table of Contents
 
